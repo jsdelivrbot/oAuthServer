@@ -17,6 +17,7 @@ var app = express();
 var app = require('express').createServer();
 
 
+app.set('port', (process.env.PORT || 5000));
 
 
 // Required to allow access to the service across different domains
@@ -27,8 +28,11 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
 // If the user provides the URL "..../add"
-app.get('/add', function(req, res, next) {
+app.get('/add', function(req, res) {
 
 
 
@@ -129,4 +133,10 @@ app.get('/add', function(req, res, next) {
   
  
 });
+
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
+
 

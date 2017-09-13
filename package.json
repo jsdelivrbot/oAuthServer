@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "oAuthServer",
   "version": "1.0.0",
   "description": "test",
   "engines": {
@@ -23,5 +23,5 @@
     "nothing"
   ],
   "author": "marco",
-  "license": "UNLICENSED"
+  "license": “MIT”
 }

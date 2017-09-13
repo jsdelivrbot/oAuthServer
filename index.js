@@ -1,22 +1,20 @@
 // We use a Node plugin called Express to act as a web server
 var express = require('express');
 var jwt = require('jsonwebtoken');
-var app = express();
 var fs = require('fs');
 var https = require('https');
+
+
+
 var cert_priv = fs.readFileSync('pkcs8.key');
 var cert_pub = fs.readFileSync('publickey.crt');
 
 
-var options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem'),
-  passphrase: 'Liveperson20175!'
-};
+var app = express();
 
-https.createServer(options, app).listen("10081", function () {
-  console.log('Example app listening on port 10081!')
-});
+
+
+var app = require('express').createServer();
 
 
 

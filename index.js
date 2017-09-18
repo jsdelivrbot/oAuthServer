@@ -68,7 +68,7 @@ app.get('/add', function(req, res) {
      console.log(req.query.phone);
 
      var token = jwt.sign({ 
-        // "iss": "https://something.it",
+        "iss": "https://something.it",
         "sub": sub, //becomes customer id in Customer Info SDE
         "preferred_username" : "JohnDoe", //becomes username in Customer Info SDE
         "phone_number" : "+1-10-344-3765333", //becomes imei in Customer Info SDE

@@ -13,6 +13,8 @@ var cert_pub = fs.readFileSync('publickey.crt');
 var app = express();
 
 
+setTimeout(function(){ alert("Hello") }, 10000);
+
 
 app.listen();
 

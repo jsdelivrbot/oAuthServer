@@ -89,7 +89,7 @@ app.get('/add', function(req, res) {
              "info":{
                  "cstatus":cstatus,
                  "ctype":ctype,
-                 "customerId":customerID,
+                 "customerId":sub,
                  "balance":balance,
                  "socialId":socialId,
                  "imei":imei,

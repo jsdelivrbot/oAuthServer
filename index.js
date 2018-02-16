@@ -72,7 +72,7 @@ app.get('/add', function(req, res) {
     
      console.log(req.query.sub);
      console.log(req.query.phone);
-/******************
+
      var token = jwt.sign({ 
         "iss": "https://something.it",
         "sub": sub, //becomes customer id in Customer Info SDE
@@ -129,31 +129,8 @@ app.get('/add', function(req, res) {
         }
     ]
     }, cert_priv, { algorithm: 'RS256', expiresIn:expiresInMinutes});
-    **************/
-    
-    var token = jwt.sign({ 
-        "iss": "https://something.it",
-        "sub": "7657tyf8t7gyt6987g", //becomes customer id in Customer Info SDE
-        "preferred_username" : "JohnDoe", //becomes username in Customer Info SDE
-        "phone_number" : "+1-10-344-3765333", //becomes imei in Customer Info SDE
-        "given_name" : "Test", //becomes first part of name in Personal Info SDE
-        "family_name" : "Test2", //becomnes second part of name in Personal Info SDE
-        "email" : "email@email.com", //becomes Email adress in Peresonal Info SDE
-        "gender" : "Male", //becomes gender in Personal Info SDE 
-        "lp_sdes":[
-            {
-             "type":"ctmrinfo",
-             "info":{
-                 "ctype":"ciaociaociao"
-                 }
-             }
-        ]
-    }, cert_priv, { algorithm: 'RS256', expiresIn:expiresInMinutes});
-    
-    
-    
-    
-    
+
+
     
     
     console.log(token);
